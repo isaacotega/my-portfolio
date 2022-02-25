@@ -1,0 +1,110 @@
+body {
+	background-color: black;
+}
+
+#container {
+	width: 100%;
+	height: 100%;
+	margin: 0%;
+} 
+
+#screen {
+	width: 98%;
+	height: 20%;
+	background-color: white;
+	margin-left: 1%;
+	border-radius: 10% 10% 0 0;
+}
+
+#mainScreen {
+	width: 90%;
+	height: 50%;
+	background-color: white;
+	color: black;
+	float: left;
+	text-align: right;
+	border: 0px solid;
+	font-size: 70px;
+	border-radius: 10% 10% 0 0;
+	overflow-x: scroll;
+	margin-left: 5%;
+}
+
+#answerScreen {
+	width: 90%;
+	height: 50%;
+	background-color: white;
+	color: indigo;
+	float: left;
+	text-align: right;
+	border: 0px solid;
+	font-size: 70px;
+	font-weight: 700;
+	overflow-x: scroll;
+	margin-left: 5%;
+}
+
+#buttonHolder {
+	width: 98%;
+	margin-left:  1%;
+	height: 78%;
+	background-color: grey;
+	border-radius: 0 0 5% 5%;
+}
+
+button {
+	outline: none;
+}
+
+.number {
+	width: 24%;
+	height: 23%;
+	background-color: grey;
+	margin-left: 0.6%;
+	margin-top: 1%;
+	font-size: 50px;
+	font-weight: 700;
+	color: white;
+	border-radius:  10%;
+	border: 0px solid;
+}
+
+.number:active {
+	background-color: #6C6669;
+}
+
+.sign {
+	width: 24%;
+	height: 23%;
+	background-color: grey;
+	margin-left: 0.6%;
+	margin-top: 1%;
+	font-size: 60px;
+	font-weight: 700;
+	color: orange;
+	border-radius:  50%;
+	border: 0px solid;
+}
+
+.sign:active {
+	background-color: #6C6660;
+	color: indigo;
+}
+
+.sign2 {
+	width: 24%;
+	height: 23%;
+	background-color: grey;
+	margin-left: 0.6%;
+	margin-top: 1%;
+	font-size: 60px;
+	font-weight: 700;
+	color: cyan;
+	border-radius:  50%;
+	border: 0px solid;
+}
+
+.sign2:active {
+	background-color: #6C6660;
+	color: indigo;
+}

@@ -1,0 +1,62 @@
+body {
+	 background-color: green;
+	zoom: 80%;
+ }
+ 
+ #body {
+	text-align: center;
+}
+ 
+ #lblWelcomer {
+	font-size: 40px;
+	font-weight: 700;
+	position: absolute;
+     top: 10%;
+     color: orange;
+     left: 10%;
+     right: 10%;
+}
+
+#lblWelcomerBody {
+	font-size: 30px;
+	font-weight: 300;
+	position: absolute;
+     top: 15%;
+     color: black;
+     left: 5%;
+     right: 5%;
+}
+ 
+ #btnStartGame {
+	height: 150px;
+	width: 80%;
+	background-color: indigo;
+	color: white;
+	font-size: 40px;
+	border-radius: 20%;
+	position: absolute;
+	right: 10%;
+     top: 30%;
+}
+ 
+ #or {
+	font-size: 40px;
+	font-weight: 700;
+	position: absolute;
+     top: 50%;
+     color: orange;
+}
+ 
+ #btnJoinGame {
+	height: 100px;
+	width: 60%;
+	background-color: #8E4700;
+	color: white;
+	font-size: 30px;
+	border-radius: 20%;
+	position: absolute;
+     top: 60%;
+	right: 20%;
+}
+ 
+ 

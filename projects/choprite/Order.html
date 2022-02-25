@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Choprite Eatery</title>
+
+<link rel="stylesheet" href="Styles/Choprite.css">
+<script src="Scripts/Footer.js"></script>
+</head>
+
+<body>
+
+<div id="header">
+
+<span id="spnSideNav" onclick="openNav()">&#9776;</span>
+
+<span id="topName">Choprite</span>
+
+<img src="Images/Cart.jpg" id="imgCart" onclick="openOrderList()"></img>
+
+</div>
+
+<div id="sideNav">
+
+<p id="closeSideNav" onclick="closeNav()">x</p>
+
+<hr>
+
+<a href="Choprite.html">Home</a>
+
+<br><br>
+
+<a href="Order.html">Order</a>
+
+<br><br>
+
+<a >Contact us</a>
+
+<br><br>
+
+<a href="">About</a>
+
+<br><br>
+
+<a href="#divSubscribe" onclick="slideIn()">Subscribe</a>
+
+<br><br>
+
+</div>
+
+
+
+
+<div id="order2">
+
+
+<div id="header">
+
+<span id="spnSideNav" onclick="openNav()">&#9776;</span>
+
+<span id="topName">Choprite</span>
+
+<img src="Images/Cart.jpg" id="imgCart2" onclick="openOrderList()"></img>
+
+</div>
+
+<div id="sideNav">
+
+<p id="closeSideNav" onclick="closeNav()">x</p>
+
+<hr>
+
+<a href="Choprite.html">Home</a>
+
+<br><br>
+
+<a href="Order.html">Order</a>
+
+<br><br>
+
+<a >Contact us</a>
+
+<br><br>
+
+<a href="">About</a>
+
+<br><br>
+
+<a href="#divSubscribe" onclick="slideIn()">Subscribe</a>
+
+<br><br>
+
+</div>
+
+
+<div id="orderList">
+
+<button id="btnCloseOrderList" onclick="closeOrderList()">x</button>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>S/N</th>
+
+<th>Items</th>
+
+<th>Price(₦)</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tblBody">
+
+</tbody>
+
+<tfoot>
+
+<tr>
+
+<td>Total</td>
+
+<td></td>
+
+</tr>
+
+</tfoot>
+
+</table>
+
+</div>
+
+
+<div id="container">
+
+<div id="cover">
+
+<div id="imgHolder">
+
+<img id="imgCover" src="Images/Cover.jpg"></img>
+
+</div>
+
+<div id="description">
+
+<p id="name"><b>Choprite Eatery<b></p>
+
+<p id="slogan">Eat the way you love to</p>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<hr>
+
+<div id="main">
+
+<div class="number">1</div>
+
+<div class="number"id="currentNumber">2</div>
+
+<div class="number">3</div>
+
+<br><br><br>
+
+<p class="headings"><u>Place an Order</u></p></u>
+
+<hr>
+
+</div>
+
+<form id="frmMeal">
+
+<p class="subHeadings">Select a Meal</p>
+
+<select id="sltMeal" onchange="narrowSelection()">
+
+<option>Choose Your Meal Type</option>
+
+<option>Local Dish</option>
+
+<option>Intercontinental Dish</option>
+
+<option>Snacks</option>
+
+<option>Proteins</option>
+
+<option>Local Beverages</option>
+
+<option>Soft Drinks</option>
+
+<option>Alcoholic Beverages</option>
+
+<option>Desserts</option>
+
+</select>
+
+</form>
+
+<br>
+
+
+<form id="frmLocalDish">
+
+<p class="subHeadings">Select a Local Dish</p>
+
+<select id="sltLocalDish" onchange="prepareMenu()">
+
+<option>Choose Your Meal</option>
+
+<option>Jollof Rice</option>
+
+<option>Yam Porridge</option>
+
+<option>Semolina</option>
+
+<option>Chicken Peppersoup</option>
+
+</select>
+
+</form>
+
+<form id="frmIntercontinentalDish">
+
+<p class="subHeadings">Select an Intercontinental Dish</p>
+
+<select id="sltIntercontinentalDish" onchange="prepareMenu()">
+
+<option>Choose Your Meal</option>
+
+<option>Pizza</option>
+
+<option>Steak</option>
+
+<option>Hamburger</option>
+
+<option>Apple Pie</option>
+
+</select>
+
+</form>
+
+<form id="frmSnacks">
+
+<p class="subHeadings">Select a Snack</p>
+
+<select id="sltSnack" onchange="prepareMenu()">
+
+<option>Choose Your Snack</option>
+
+<option>Sharwama</option>
+
+<option>Fish Pie</option>
+
+<option>Egg Pie</option>
+
+<option>Potato Chips</option>
+
+</select>
+
+</form>
+
+<form id="frmProtein">
+
+<p class="subHeadings">Select a Protein</p>
+
+<select id="sltProtein" onchange="prepareMenu()">
+
+<option>Choose Your Protein</option>
+
+<option>Chicken</option>
+
+<option>Fish</option>
+
+<option>Beef</option>
+
+<option>Snail</option>
+
+</select>
+
+</form>
+
+<form id="frmLocalBeverages">
+
+<p class="subHeadings">Select a Local Beverage</p>
+
+<select id="sltLocalBeverages" onchange="prepareMenu()">
+
+<option>Choose Your Drink</option>
+
+<option>Kunu</option>
+
+<option>Zobo</option>
+
+<option>Fura da Nono</option>
+
+<option>Palm Wine</option>
+
+</select>
+
+</form>
+
+<form id="frmSoftDrinks">
+
+<p class="subHeadings">Select a Soft Drink</p>
+
+<select id="sltSnack" onchange="prepareMenu()">
+
+<option>Choose Your Drink</option>
+
+<option>CocaCola</option>
+
+<option>Amstel Malta</option>
+
+<option>Farouz</option>
+
+<option>Climax</option>
+
+</select>
+
+</form>
+
+<form id="frmAlcoholicBeverages">
+
+<p class="subHeadings">Select an Alcoholic Beverage</p>
+
+<select id="sltAlcoholicBeverage" onchange="prepareMenu()">
+
+<option>Choose Your Drink</option>
+
+<option>Guiness</option>
+
+<option>Hero</option>
+
+<option>Blanton's Bourbon</option>
+
+<option>Baron Romero</option>
+
+</select>
+
+</form>
+
+<form id="frmDesserts">
+
+<p class="subHeadings">Select a Dessert</p>
+
+<select id="sltDesserts" onchange="prepareMenu()">
+
+<option>Choose Your Dessert</option>
+
+<option>Pizza</option>
+
+<option>Toast Bread</option>
+
+<option>Mangomisu</option>
+
+<option>Cake</option>
+
+</select>
+
+</form>
+
+
+<button onclick="nextPage2()" id="nextButton2" type="button">Next</button>
+
+</div>
+
+<hr>
+
+
+
+<div id="footer">
+
+<br><br>
+
+<p id="invitation">Like and Follow us</p>
+
+<br><br>
+
+<img class="imgSocialIcons" src="Images/FbLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/WspLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/PntLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/IsgLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/GmLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/TwtLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/LkdLogo.jpg"></img>
+
+<br><br>
+
+<div id="footerLinks">
+
+<div id="footer1">
+
+<br>
+
+<a href="">About</a>
+
+<br>
+
+<a href="">We're Hiring</a>
+
+<br>
+
+<a href="">Find Store</a>
+
+<br>
+
+<a href="">Help</a>
+
+</div>
+
+<div id="footer2">
+
+<br>
+
+<a href="">Contact Us</a>
+
+<br>
+
+<a href="">Privacy Policy</a>
+
+<br>
+
+<a href="">Terms Of Service</a>
+
+<br>
+
+<a href="">Email Us</a>
+
+</div>
+
+</div>
+
+<br><br>
+
+<hr>
+
+<br>
+
+Powered By
+
+<br>
+
+<img id="serverLogo" src="Images/SplashPic.jpg"></img>
+
+<br>
+
+</div>
+
+</div>
+
+
+
+
+
+<div id="order3">
+
+<div id="header">
+
+<span id="spnSideNav" onclick="openNav()">&#9776;</span>
+
+<span id="topName">Choprite</span>
+
+<img src="Images/Cart.jpg" id="imgCart2" onclick="openOrderList()"></img>
+
+</div>
+
+<div id="sideNav">
+
+<p id="closeSideNav" onclick="closeNav()">x</p>
+
+<hr>
+
+<a href="Choprite.html">Home</a>
+
+<br><br>
+
+<a href="Order.html">Order</a>
+
+<br><br>
+
+<a >Contact us</a>
+
+<br><br>
+
+<a href="">About</a>
+
+<br><br>
+
+<a href="#divSubscribe" onclick="slideIn()">Subscribe</a>
+
+<br><br>
+
+</div>
+
+
+
+
+
+
+
+<div id="container">
+
+<div id="cover">
+
+<div id="imgHolder">
+
+<img id="imgCover" src="Images/Cover.jpg"></img>
+
+</div>
+
+<div id="description">
+
+<p id="name"><b>Choprite Eatery<b></p>
+
+<p id="slogan">Eat the way you love to</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<hr>
+
+<div id="main">
+
+<div class="number">1</div>
+
+<div class="number">2</div>
+
+<div class="number" id="currentNumber">3</div>
+
+<br><br><br>
+
+<p class="headings"><u>Payment</u></p>
+
+<hr>
+
+</div>
+
+<p class="subHeadings">Select a Payment Method</p>
+
+<button class="paymentMethod">Bank Transfer</button>
+
+<br><br>
+
+<img src="Images/Paypal.jpg" class="paymentMethod"></img>
+
+<hr>
+
+
+
+<div id="footer">
+
+<br><br>
+
+<p id="invitation">Like and Follow us</p>
+
+<br><br>
+
+<img class="imgSocialIcons" src="Images/FbLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/WspLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/PntLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/IsgLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/GmLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/TwtLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/LkdLogo.jpg"></img>
+
+<br><br>
+
+<div id="footerLinks">
+
+<div id="footer1">
+
+<br>
+
+<a href="">About</a>
+
+<br>
+
+<a href="">We're Hiring</a>
+
+<br>
+
+<a href="">Find Store</a>
+
+<br>
+
+<a href="">Help</a>
+
+</div>
+
+<div id="footer2">
+
+<br>
+
+<a href="">Contact Us</a>
+
+<br>
+
+<a href="">Privacy Policy</a>
+
+<br>
+
+<a href="">Terms Of Service</a>
+
+<br>
+
+<a href="">Email Us</a>
+
+</div>
+
+</div>
+
+<br><br>
+
+<hr>
+
+<br>
+
+Powered By
+
+<br>
+
+<img id="serverLogo" src="Images/SplashPic.jpg"></img>
+
+<br>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="container">
+
+<div id="cover">
+
+<div id="imgHolder">
+
+<img id="imgCover" src="Images/Cover.jpg"></img>
+
+</div>
+
+<div id="description">
+
+<p id="name"><b>Choprite Eatery<b></p>
+
+<p id="slogan">Eat the way you love to</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div id="main">
+
+<div class="number" id="currentNumber">1</div>
+
+<div class="number">2</div>
+
+<div class="number">3</div>
+
+<br><br><br>
+
+<u><p class="headings">Place an Order</p></u>
+
+<hr>
+
+<form id="frmLocation">
+
+<br><br>
+
+<p class="subHeadings">Enter Location</p>
+
+<input type="text" placeholder="State of Residence" onkeyup="checkState()" id="inpState">
+
+<div id="furtherLocation">
+
+<br><br><br><br>
+
+<input type="text" placeholder="Town" id="inpTown" onkeyup="showNextBtn1()">
+
+<br><br><br><br>
+
+<input type="text" placeholder="Local Government Area" id="inpLGA" onkeyup="showNextBtn1()">
+
+<br><br><br><br>
+
+<input type="text" value="PO Box " id="inpPostalCode" onkeyup="showNextBtn1()">
+
+</div>
+
+<br><br><br><br>
+
+<button onclick="nextPage()" type="button">Next</button>
+
+<button id="nextButton" onclick="nextPage()" type="button">Next</button>
+
+<br><br>
+
+</form>
+
+</div>
+
+<hr>
+
+<div id="divSubscribe">
+
+<br>
+
+<u><p class="headings">Subscribe</p></u>
+
+<form id="frmSubscribe" action="">
+
+<br><br>
+
+<p>Subscribe today and stand a chance to win a free VIP ticket!</p>
+
+<br><br>
+
+<input type="email" placeholder="Enter Email Address"></input>
+
+<br><br>
+
+<button type="submit">Subscribe</button>
+
+<br><br>
+
+</form>
+
+<br><br>
+
+</div>
+
+<div id="footer">
+
+<br><br>
+
+<p id="invitation">Like and Follow us</p>
+
+<br><br>
+
+<img class="imgSocialIcons" src="Images/FbLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/WspLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/PntLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/IsgLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/GmLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/TwtLogo.jpg"></img>
+
+<img class="imgSocialIcons" src="Images/LkdLogo.jpg"></img>
+
+<br><br>
+
+<div id="footerLinks">
+
+<div id="footer1">
+
+<br>
+
+<a href="">About</a>
+
+<br>
+
+<a href="">We're Hiring</a>
+
+<br>
+
+<a href="">Find Store</a>
+
+<br>
+
+<a href="">Help</a>
+
+</div>
+
+<div id="footer2">
+
+<br>
+
+<a href="">Contact Us</a>
+
+<br>
+
+<a href="">Privacy Policy</a>
+
+<br>
+
+<a href="">Terms Of Service</a>
+
+<br>
+
+<a href="">Email Us</a>
+
+</div>
+
+</div>
+
+<br><br>
+
+<hr>
+
+<br>
+
+Powered By
+
+<br>
+
+<img id="serverLogo" src="Images/SplashPic.jpg"></img>
+
+<br>
+
+</div>
+
+<script src="Scripts/Choprite.js"></script>
+
+</body>
+
+</html>
+

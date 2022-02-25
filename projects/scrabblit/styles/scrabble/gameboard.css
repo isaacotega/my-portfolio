@@ -1,0 +1,373 @@
+#divAcceptSeed {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  text-align: center;
+  transition: height 0.3s;
+  border-top: 0.5px solid white;
+}
+
+#divAcceptSeed label {
+  color: white;
+  font-size: 35px;
+  margin: 0 0 0 15px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+#divAcceptSeed button {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0 0 0 15px;
+  width: 200px;
+  height: 100px;
+  border-radius: 10%;
+}
+
+#divAcceptSeed button:active {
+	background-color: purple;
+}
+
+#acceptSeedNo {
+	background-color: cyan;
+	color: blue;
+	float: left;
+}
+
+#acceptSeedYes {
+	background-color: blue;
+	color: white;
+	float: right;
+}
+
+#searchIcon {
+	display: none;
+}
+
+#searchPortHolder {
+	width: 100%;
+	text-align: center;
+	transition: 0.3s;
+}
+
+#searchPort {
+  width: 0%;
+  height: 0%;
+  border-radius: 50%;
+  position: fixed;
+  margin-top: 6%;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: white;
+  transition: 0.3s;
+}
+
+#searchBar {
+  height: 0px;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: height 0.3s;
+  border-bottom: 0.5px solid black;
+}
+
+#imgSearchEngine {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #352E2D;
+  float: left;
+  margin: 10px 0 0 5px;
+}
+
+#inpSearch {
+  height: 60px;
+  width: 80%;
+  font-size: 35px;
+  margin: 2px 5px 0 0;
+  border: 2px solid white;
+  border-bottom: 2px solid black;
+}
+
+#closeSearch {
+	color: red;
+     font-size: 30px;
+     font-family: calibri;
+}
+
+#secondHeader {
+  height: 120px;
+  width: 100%;
+  position: fixed;
+  background-color: #352E2D;
+  color: white;
+  font-size: 40px;
+  top: 80px;
+  left: 0;
+  transition: opacity 0.3s;
+}
+
+#logo {
+  height: 80px;
+  width: 80px;
+  float: left;
+  background-color: #0F2231;
+  margin-right: 10px;
+  border-radius: 10%;
+}
+
+.headIcon {
+  height: 80px;
+  width: 80px;
+  float: right;
+  background-color: #0F2231;
+  margin-right: 10px;
+  border-radius: 10%;
+}
+
+#refresh {
+	background-color: #0A291B;
+}
+
+#refreshingIcon {
+  border: 15px solid white;
+  border-radius: 50%;
+  border-top: 15px solid #352E2D;
+  background-color: #352E2D;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 0.8s linear infinite; /* Safari */
+  animation: spin 0.8s linear infinite;
+  margin-left: 30%;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#participantsBar {
+	height: 100%;
+	width: 100%;
+//	background-color: white;
+}
+
+#participantsBar .eachParticipant {
+	height: 100px;
+     width: 100px;
+     float: left;
+     background-color: #0F2231;
+     margin: 5px 0 0 20px;
+     border-radius: 10%;
+}
+
+#participantsBar .eachParticipant .eachParticipantPicture {
+	height: 50px;
+     width: 50px;
+     float: left;
+     background-color: blue;
+     margin-left: 25px;
+     border-radius: 50%;
+}
+
+#participantsBar .eachParticipant span {
+	font-size: 10px;
+	color: white;
+}
+
+#contestHolder {
+	height: 80px;
+	width: 80px;
+	color: white;
+	border-radius: 50%;
+	position: fixed;
+	right: 5px;
+     top: 100px;
+	background-color: #352E2D;
+	color: white;
+}
+
+#btnContest {
+	height: 80px;
+	width: 80px;
+	color: blue;
+	font-size: 18px;
+	font-weight: 700;
+	border-radius: 50%;
+	background-color: orange;
+	display: none;
+}
+
+ #gameBoard {
+	width: 100%;
+	background-color: white;
+     transition: opacity 0.3s;
+}
+
+.plainBox {
+	background-color: #064D0D;
+}
+ 
+.doubleLetterBox {
+	background-color: cyan;
+}
+ 
+.tripleLetterBox {
+	background-color: blue;
+}
+ 
+.doubleWordBox {
+	background-color: orange;
+}
+ 
+.tripleWordBox {
+	background-color: red;
+}
+
+.defaultPlacedSeed {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.defaultPlacedSeed .letter {
+	font-size: 30px;
+	font-weight: 700;
+	color:indigo;
+	width: 10px;
+}
+
+.defaultPlacedSeed .point {
+	font-size: 15px;
+	font-weight: 700;
+	color:indigo;
+	width: 10px;
+}
+
+.placedSeed {
+	margin-left: 5%;
+	width: 90%;
+	height: 90%;
+	border-radius: 20%;
+	background-color: white;
+	text-align: center;
+	border: 2px solid black;
+}
+
+.placedSeed .letter {
+	font-size: 30px;
+	font-weight: 700;
+	color:indigo;
+	width: 10px;
+}
+
+.placedSeed .point {
+	font-size: 15px;
+	font-weight: 700;
+	color:indigo;
+	width: 10px;
+}
+
+.hangingSeed {
+	margin: 5%;
+	width: 90%;
+	height: 90%;
+	border-radius: 20%;
+	background-color: orange;
+	text-align: center;
+	border: 2px solid black;
+}
+
+.hangingSeed .letter {
+	font-size: 30px;
+	font-weight: 700;
+	color:indigo;
+	width: 10px;
+}
+
+.hangingSeed .point {
+	font-size: 15px;
+	font-weight: 700;
+	color:indigo;
+	width: 10px;
+}
+
+#rack {
+	background-color: black;
+	width: 80%;
+	height: 150px;
+	position: absolute;
+	bottom: 5px;
+	left: 10%;
+	 text-align: center;
+	 border-radius: 5%;  
+	 box-shadow: 0 0 40px 10px green;
+	 transition: opacity 0.3s;
+}
+ 
+ .seed {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	 border-radius: 10%;
+	 float: left;
+	 margin: 25px 0 0 10px;
+}
+ 
+.seed:active {
+	background-color: grey;
+}
+
+ .seed .letter {
+	font-size: 60px;
+	font-weight: 700;
+	color:indigo;
+}
+
+ .seed .point {
+	font-size: 20px;
+	font-weight: 700;
+	color: black;
+	float: right;
+	margin-right: 10px;
+}
+
+.lblGameStatus {
+	font-family: times;
+	font-size: 30px;
+	font-weight: 700;
+	color: white;
+}
+
+#submitGame {
+	height: 80px;
+	width: 80px;
+	color: white;
+	font-size: 30px;
+	font-weight: 700;
+	border-radius: 50%;
+	position: fixed;
+	right: 5px;
+     bottom: 40px;
+	background-color: indigo;
+	color: white;
+	display: none;
+}
+ 
+#submitGame:active {
+	background-color: magenta;
+ }

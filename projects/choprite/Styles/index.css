@@ -1,0 +1,453 @@
+body {
+text-align: center;
+}
+
+#header {
+width: 100%;
+height: 80px;
+background-color: purple;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+font-size: 50px;
+font-weight: 300;
+font-family: times;
+color: white;
+}
+
+#sideNavIcon {
+float: left;
+margin-left: 10px;
+}
+
+#sideNav {
+height: 100%;
+width: 0;
+font-size: 30px;
+font-weight: 300;
+font-family: times;
+background-color: indigo;
+color: white;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+overflow-x: hidden;
+transition: 0.3s;
+}
+
+#sideNav a {
+color: white;
+}
+
+#closeSideNav {
+margin-left: 70%;
+background-color: purple;
+}
+
+#closeSideNav:hover {
+background-color: #FF0000;
+}
+
+#cover {
+height: 40%;
+width: 100%;
+position: absolute;
+margin-top: 10%;
+}
+
+#imgHolder {
+height: 100%;
+width: 100%;
+position: absolute;
+}
+
+#imgCover {
+width: 100%;
+height: 100%;
+opacity: 0.5;
+}
+
+#description {
+height: 40%;
+width: 100%;
+z-index: 9;
+opacity: 0.9;
+}
+
+#name {
+color: indigo;
+font-size: 700%;
+font-family: times;
+}
+
+#slogan {
+font-size: 500%;
+font-family: cursive;
+font-weight: 700;
+color: brown;
+}
+
+#main {
+margin-top: 70%;
+}
+
+#categories {
+background-color: magenta;
+border-radius: 10%;
+}
+
+.headings {
+font-size: 500%;
+font-family: times;
+font-weight: 700;
+color: black;
+}
+
+.subHeadings {
+font-size: 300%;
+font-family: times;
+font-weight: 700;
+color: purple;
+}
+
+.homeDisplay {
+width: 48%;
+height: 300px;
+border-radius: 20%;
+}
+
+.more {
+width: 28%;
+height: 100px;
+font-size: 300%;
+font-family: times;
+font-weight: 700;
+color: white;
+background-color: green;
+border-radius: 30%;
+}
+
+.more:hover {
+background-color: maroon;
+width: 27.5%;
+height: 95px;
+}
+
+#btnQuickOrder {
+width: 70%;
+height: 130px;
+font-size: 350%;
+font-family: times;
+font-weight: 700;
+color: white;
+background-color: brown;
+border-radius: 20%;
+}
+
+#btnQuickOrder:hover {
+width: 68%;
+height: 110px;
+background-color: indigo;
+}
+
+form {
+width: 80%;
+height: 500px;
+margin-left: 10%;
+}
+
+form:hover {
+background-color: skyblue;
+}
+
+form p {
+font-size: 200%;
+font-family: times;
+font-weight: 700;
+color: black;
+}
+
+form input {
+width: 70%;
+height: 80px;
+background-color: cyan;
+font-size: 300%;
+}
+
+form input:hover {
+background-color: white;
+}
+
+form select {
+width: 70%;
+height: 80px;
+background-color: cyan;
+font-size: 300%;
+}
+
+form select:hover {
+background-color: magenta;
+}
+
+form button {
+width: 30%;
+height: 90px;
+background-color: maroon;
+font-size: 250%;
+color: white;
+border-radius: 30%;
+}
+
+form button:hover {
+background-color: purple;
+width: 18%;
+height: 78px;
+}
+
+#footer {
+background-color: black;
+color: white;
+}
+
+.imgSocialIcons {
+width: 80px;
+height: 80px;
+border-radius: 10%;
+}
+
+#footerLinks {
+font-size: 150%;
+color: white;
+text-align: left;
+}
+
+#invitation {
+font-size: 250%;
+}
+
+#footer1 {
+float: left;
+font-size: 145%;
+}
+
+#footer1 a {
+color: white;
+font-weight: 100;
+}
+
+#footer2 a {
+color: white;
+font-weight: 100;
+margin-left: 40%;
+}
+
+#serverLogo {
+width: 280px;
+height: 120px;
+}
+
+#imgCart {
+height: 70px;
+width: 70px;
+border-radius: 50%;
+border: 5px solid blue;
+}
+
+#imgCart2 {
+height: 70px;
+width: 70px;
+border-radius: 50%;
+border: 5px solid blue;
+transition: border 1s;
+}
+
+#btnCloseOrderList {
+height: 70px;
+width: 70px;
+border-radius: 20%;
+border: 3px solid white;
+background-color: red;
+color: white;
+font-size: 300%;
+margin-left: 90%;
+}
+
+#orderList {
+height: 0%;
+width: 99%;
+font-size: 100%;
+font-weight: 400;
+font-family: times;
+background-color: cyan;
+border: 5px solid blue;
+color: black;
+position: fixed;
+z-index: 1;
+top: 7%;
+right: 0;
+overflow-x: hidden;
+transition: 1s;
+}
+
+table {
+height: 95%;
+width: 96%;
+color: black;
+border: 4px solid black;
+margin-top: 10%;
+margin-left: 2%;
+}
+
+thead {
+height: 100px;
+width: 100%;
+color: blue;
+background-color: skyblue;
+border: 4px solid purple;
+}
+
+tbody {
+width: 100%;
+color: blue;
+background-color: skyblue;
+border: 4px solid purple;
+}
+
+tfoot {
+height: 100px;
+width: 100%;
+color: white;
+background-color: indigo;
+border: 4px solid purple;
+}
+
+tr {
+height: 100px;
+width: 33.3%;
+border: 4px solid blue;
+}
+
+td{
+height: 50%;
+}
+
+.number {
+height: 100px;
+width: 100px;
+border: 20px solid #FF0000;
+border-radius: 50%;
+font-size: 80px;
+color: #FF0000;
+float: left;
+margin-left: 13%
+}
+
+#currentNumber {
+background-color: orange;
+color: white;
+}
+
+#nextButton {
+width: 30%;
+height: 90px;
+background-color: green;
+font-size: 250%;
+color: white;
+border-radius: 30%;
+display: none;
+}
+
+#order2 {
+height: 1500px;
+width: 0;
+font-size: 100%;
+font-weight: 400;
+font-family: times;
+background-color: white;
+color: white;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 0;
+overflow-x: hidden;
+transition: 0.5s;
+}
+
+#nextButton2 {
+width: 30%;
+height: 90px;
+background-color: green;
+font-size: 250%;
+color: white;
+border-radius: 30%;
+}
+
+#order3 {
+height: 1500px;
+width: 0;
+font-size: 100%;
+font-weight: 400;
+font-family: times;
+background-color: white;
+color: white;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 0;
+overflow-x: hidden;
+transition: 0.5s;
+}
+
+#frmLocation {
+height: 50%;
+}
+
+#furtherLocation {
+display: none;
+}
+
+#frmLocalDish {
+display: none;
+}
+
+#frmIntercontinentalDish {
+display: none;
+}
+
+#frmSnacks {
+display: none;
+}
+
+#frmProtein {
+display: none;
+}
+
+#frmLocalBeverages {
+display: none;
+}
+
+#frmSoftDrinks {
+display: none;
+}
+
+#frmAlcoholicBeverages {
+display: none;
+}
+
+#frmDesserts {
+display: none;
+}
+
+.paymentMethod {
+width: 50%;
+height: 120px;
+background-color: orange;
+font-size: 300%;
+color: white;
+border-radius: 20%;
+}
+
+
+

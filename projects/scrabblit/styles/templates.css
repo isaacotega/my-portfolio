@@ -1,0 +1,295 @@
+/* Header */
+
+.header {
+background-color: #0A291B;
+color: white;
+font-size: 45px;
+font-weight: 700;
+width: 100%;
+position: fixed;
+left: 0;
+top: 0;
+height: 80px;
+text-align: center;
+z-index: 1;
+border: 0px solid;
+	box-shadow: 0 0 10px 1px black;
+}
+
+.heading {
+	float: left;
+	font-size: 47px;
+	font-weight: 300;
+}
+
+.titleBar {
+background-color: #0A291B;
+color: white;
+font-size: 30px;
+font-weight: 300;
+font-family: times;
+width: 100%;
+position: fixed;
+left: 0;
+top: 5.9%;
+height: 80px;
+text-align: center;
+z-index: 1;
+border: 0px solid;
+}
+
+.backIcon {
+margin-left: 5px;
+float: left;
+color: white;
+border-radius: 50%;
+width: 50px;
+}
+
+.backIcon:active {
+background-color: #41854D;
+}
+
+.navIcon {
+margin-right: 5px;
+float: right;
+color: white;
+transition: color 0.3s;
+}
+
+/* SideNav */
+
+.sideNav {
+width: 0%;
+height: 100%;
+margin-top: 6%;
+font-size: 27px;
+font-weight: 200;
+font-family: times;
+position: fixed;
+overflow-x: hidden;
+z-index: 1;
+left: 0;
+color: white;
+text-align: center;
+background-color: #0A2F1F;
+transition: width 0.3s;
+}
+
+.sideNav a {
+color: white;
+}
+
+.sideNav a:active {
+color: orange;
+}
+
+/* Forms */
+
+.form {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.form .formHeading {
+	color: white;
+	font-size: 30px;
+     font-family: times;
+	font-weight: 700;
+}
+
+.form input {
+	width: 80%;
+	height: 60px;
+	font-size: 30px;
+     background-color: white;
+}
+
+.form select {
+	width: 80%;
+	height: 60px;
+	font-size: 30px;
+     background-color: white;
+}
+
+.form button {
+	width: 150px;
+	height: 60px;
+	font-size: 30px;
+	font-weight: 700;
+	background-color: #72A200;
+	border-radius: 20%;
+	color: white;
+}
+
+.form button:active {
+	background-color: #004A09;
+}
+
+.form .otherButton {
+	width: 150px;
+	height: 60px;
+	font-size: 30px;
+	font-weight: 700;
+	background-color: #8E4700;
+	border-radius: 20%;
+	color: white;
+}
+
+/* Hidden elements */
+
+.hidden {
+	display: none;
+}
+
+/* Toast */
+
+#toastHolder {
+	position: fixed;
+	bottom: 100px;
+	text-align: center;
+	width: 100%;
+}
+
+#toast {
+	opacity: 0;
+	transition: opacity 0.5s;
+	height: 70px;
+	font-size: 28px;
+	background-color: #4A4C46;
+	border: 0px solid;
+	border-radius: 15%;
+	color: white;
+}
+
+#toast label {
+	margin: 0 30px 0 30px; 
+}
+
+/* Options */
+
+.option {
+	width: 100%;
+	height: 80px;;
+	text-align: center;
+	z-index: 1;
+	border: 0px solid;
+	margin: 0;
+	background: rgba(255, 239, 193, 0.2);
+}
+
+.optionText {
+	color: black;
+	font-size: 30px;
+	font-family: times;
+	float: left;
+}
+
+.strongOptionText {
+	color: purple;
+	font-size: 30px;
+	font-weight: 300;
+	font-family: times;
+	float: right;
+}
+
+#participantName {
+	color: white;
+}
+
+/* Loader */
+
+.loader {
+  border: 15px solid white;
+  border-radius: 50%;
+  border-top: 15px solid #352E2D;
+  background-color: #352E2D;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 0.8s linear infinite;
+  animation: spin 0.8s linear infinite;
+  margin-left: 30%;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* full loader */
+
+.fullLoader {
+  border: 15px solid white;
+  border-radius: 50%;
+  border-top: 15px solid green;
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 0.8s linear infinite;
+  animation: spin 0.8s linear infinite;
+  position: absolute;
+  top: 45%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* floating buttons */
+
+.floatingButton {
+	height: 100px;
+	width: 200px;
+	color: white;
+	font-size: 30px;
+	font-weight: 700;
+	border-radius: 20%;
+	position: fixed;
+	display: none;
+}
+
+#btnBeginGame {
+	right: 60px;
+     bottom: 60px;
+	background-color: indigo;
+}
+
+#btnEndGame {
+	left: 60px;
+     bottom: 60px;
+	background-color: red;
+}
+
+/* Center placed divs */
+
+.centerPlaced {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.centerPlaced .head {
+	color: white;
+	font-size: 40px;
+     font-family: times;
+	font-weight: 700;
+}
+
+.centerPlaced label {
+	color: black;
+	font-size: 30px;
+     font-family: times;
+	font-weight: 700;
+}

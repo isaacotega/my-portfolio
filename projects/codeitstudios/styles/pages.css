@@ -1,0 +1,18 @@
+/* Homepage */
+
+#homeImage {
+	height: 20cm;
+	width: 100%;
+}
+
+.imageHolder {
+	text-align: center;
+	width: 100%;
+}
+
+.imageHolder img {
+	height: 2cm;
+	width: 2cm;
+	margin: 5mm;
+	border-radius: 50%;
+}

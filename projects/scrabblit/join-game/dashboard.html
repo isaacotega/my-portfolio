@@ -1,0 +1,190 @@
+	<button class="titleBar">Dashboard</button>
+ 
+	
+	<br><br><br><br><br><br><br><br>
+
+	<button class="option">
+	
+		<label class="optionText">Game Id: </label>
+		
+		<label id="gameId" class="strongOptionText"></label>
+	
+	</button>
+	
+	<button class="option">
+	
+		<label class="optionText">Game: </label>
+		
+		<label id="gameName" class="strongOptionText"></label>
+	
+	</button>
+	
+	<button class="option">
+	
+		<label class="optionText">Participants</label>
+		
+		<label id="participantsNumber" class="strongOptionText"></label>
+	
+	</button>
+	
+	<div id="gameParticipants"></div>
+	
+	<button class="floatingButton" id="btnEndGame">End Game</button>
+	
+	<button class="floatingButton" id="btnBeginGame"></button>
+	
+	 <textarea class="hidden" id="gameStatus"></textarea>
+	 
+	<script>
+
+//display btnBeginGame text as appropriate 
+
+	 //loading status file to check game status on interval of 1 sec
+	 		
+	 	setInterval(function() {
+	 		
+	 		$("#gameStatus").load("../session/" + sessionStorage.getItem("gameStatus") + "/status.txt", function(responseTxt,  statusTxt, xhr) {
+	 		
+	 			if($("#gameStatus").html() == "pending") {
+	 			
+	 				$("#btnBeginGame").html("Begin Game");
+	 				
+	 			}
+	 			
+	 			else if($("#gameStatus").html() == "ongoing"){
+	 			
+	 				$("#btnBeginGame").html("Pause");
+	 			
+	 			}
+	 		
+	 			else if($("#gameStatus").html() == "paused"){
+	 			
+	 				$("#btnBeginGame").html("Resume");
+	 			
+	 			}
+	 		
+	 			else {}
+	 		
+	 	});
+	 	
+	}, 1000);
+	
+
+// btnBeginGame click listener
+	 		
+	 $("#btnBeginGame").click(function() {
+	 
+	 	if($(this).html() == "Begin Game") {
+	 	
+	 		updateStatus("ongoing");
+	 		
+	 	// sending AJAX request to create participants array
+	 				
+	 			//declaring participants variable
+	 			
+	 				var participants = "";
+	 				
+	 				var participantsLength = $("[id=participantName]").length; 
+	 				
+	 				var x = 0;
+	 				
+	 	// loop through participants list
+	 				
+	 				while(x < participantsLength) {
+	 				
+	 					participants += '"' + $("[id=participantName]").eq(x).html().replace("<br><br>", "") + '"' + ", ";
+	 					
+	 					x++;
+	 				
+	 				}
+	 				
+	 	// trim off the last comma and space 
+	 				
+	 				var participantsLth = participants.length;
+	 				
+	 				participants = participants.substr(0, participantsLth - 2);
+	 	
+	 		// send AJAX request 
+	 				
+						$.ajax({
+	
+							type: "POST",
+							url: "../scripts/participantsArrayCreator.php",
+							data: {
+		
+							gameFolder: sessionStorage.getItem("gameStatus"),
+							participants: participants
+			
+							},
+							
+				cache: false,
+				
+				success: toast("Game session has begun")
+		
+	});
+	
+	// return to game 
+	
+	window.location.href = "../";
+	 			
+	 	}
+	 
+	 	else if($(this).html() == "Pause") {
+	 	
+	 		updateStatus("paused");
+	 	
+	 	}
+	 
+	 	else if($(this).html() == "Resume") {
+	 	
+	 		updateStatus("ongoing");
+	 	
+	 	}
+	 
+	 });
+	 
+	function updateStatus(status) {
+	
+	$.ajax({
+	
+		type: "POST",
+		url: "../scripts/gameStatusUpdater.php",
+		data: {
+		
+			gameFolder: sessionStorage.getItem("gameStatus"),
+			status: status
+			
+		},
+		cache: false
+		
+	});
+	
+	}
+		
+		
+//display game id
+	
+		$("#gameId").html(sessionStorage.getItem("gameStatus"));
+		
+	// load participants from participants file and game name from game file and display participants number
+	
+		setInterval(function() {
+	
+			$("#gameName").load("../session/" + sessionStorage.getItem("gameStatus") + "/game.txt");
+			
+			$("#gameParticipants").load("../session/" + sessionStorage.getItem("gameStatus") + "/participants.html");
+			
+		$("#participantsNumber").html($("[id=participantName]").length);
+		
+	// hide floating buttons from anyone who is not host
+	 			
+		 if($("#participantName").eq(0).html() == localStorage.getItem("scrabblitUsername")) {
+
+			$(".floatingButton").css("display", "block");
+
+		}
+	 
+		}, 1000);
+	
+		
+	</script>

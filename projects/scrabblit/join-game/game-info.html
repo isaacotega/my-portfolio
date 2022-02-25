@@ -1,0 +1,148 @@
+	<form action="../scripts/newGameCreator.php" method="post" id="newGameForm" class="form">
+	 
+	 <label class="formHeading">New game</label>
+	 
+	 <br><br>
+	
+	 <input name="newGameId" id="newGameId" placeholder="Enter your game id" required>
+	 
+	 <br><br>
+	 
+	 <input name="newGamePassword" type="password" placeholder="Enter a password" required>
+	 
+	 <br><br>
+	 
+	 <select id="sltGame" name="game" required>
+	 
+	 	<option selected hidden>Select a game</option>
+	 
+	 	<option>Scrabble</option>
+	 
+	 	<option>Whot</option>
+	 
+	 </select>
+	 
+	 <br><br>
+	 
+	 <input class="hidden" name="gameExist" id="gameExist" value="" >
+	 
+	 <input class="hidden" name="userVariable" id="userVariable" value="" >
+	 
+	 <input class="hidden" name="username" id="username">
+	 
+	 <input class="hidden" name="cardSelectionArray" id="hiddenCardSelectionArray">
+	 
+	 <textarea class="hidden" name="newGameStatus" id="newGameStatus"></textarea>
+	 
+	 <button type="submit">Submit</button>
+	 
+	 </form>
+	 
+	 <script>
+	 
+	 setInterval(function() {
+	 
+		 checkSessionExistance();
+		 
+		}, 200);
+	 
+	 		$("#username").val( localStorage.getItem("scrabblitUsername"));
+	 		
+	 		$("#userVariable").val(localStorage.getItem("accountInformation"));
+	 		
+//form submit event listener 
+	 		
+	 	$("#newGameForm").submit(function() {
+	 	
+	 	if($("#sltGame").val() =="Select a game") {
+	 	
+	 				event.preventDefault();
+	 				
+	 				toast("Please select a game");
+	 		
+	 	}
+	 		
+	 	if($("#sltGame").val() =="Whot") {
+	 	
+	 	// code block which fixes random numbers for whot card selection array 
+	 	
+			var arr = [];
+
+			var x = 0;
+
+			var rn;
+
+			while ( x < 54 ) {
+
+				rn = randomNumb();
+	
+				if(arr.indexOf(rn) == -1) {
+	
+					arr.push(" " + rn);
+	
+					x++;
+
+				}
+	
+			}
+
+			function randomNumb() {
+
+				return Math.floor(Math.random() * 54);
+	
+			}
+			
+			$("#hiddenCardSelectionArray").val("var cardSelectionArray = [" + arr + "];");
+	 		
+	 		}
+	 		
+	 		else {
+	 				
+	 //trimming game name
+	 	
+	 			$("#newGameId").val( $("#newGameId").val().trim().toLowerCase().replace(/ /g, "") );
+	 			
+	 		}
+	 		
+	 	});
+	 	
+	 	
+	 	
+// game id keyup event listener 
+	  		
+	 	$("#newGameId").keyup(function() {
+	 	
+	 		checkSessionExistance();
+	 			
+	 	});
+	 	
+	 	
+	 		
+	// function to check if session already exists 
+	 		
+	 		function checkSessionExistance() {
+	 			
+	 //loading pswd file to check if game is already in progress
+	 		
+	 		$("#newGameStatus").load("../session/" + $("#newGameId").val() + "/pswd.txt", function(responseTxt,  statusTxt, xhr) {
+	 		
+	 	//prevent creation of new session if it already exists 
+	 		
+	 			if(statusTxt == "success") {
+	 			
+	 			$("#gameExist").val("yes");
+	 			
+	 			}
+	 			
+	 			else {
+	 			
+	 				$("#gameExist").val("no");
+	 			
+	 			}
+	 		
+	 	});
+	 	
+	 }
+	 		
+	 </script>
+	 

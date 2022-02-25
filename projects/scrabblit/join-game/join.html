@@ -1,0 +1,30 @@
+<!-- form action is defined in index file so as to give chance for a redirect to dashboard after form submission if get data follows -->
+
+<form method="post" id="joinGameForm" class="form">
+	 
+	 <label class="formHeading">Join a game</label>
+	 
+	 <br><br>
+	
+	 <input name="gameId" id="gameId" placeholder="Enter game id" required>
+	 
+	 <br><br>
+	 
+	 <input name="gamePassword" type="password" placeholder="Enter game password" required>
+	 
+	 <br><br>
+	 
+	 <button type="submit">Join</button>
+	 
+	 </form>
+	 
+	 <script>
+	 
+	 	$("#joinGameForm").submit(function() {
+	 	
+	 		$("#gameId").val( $("#gameId").val().trim().toLowerCase().replace(/ /g, "") );
+	 		
+	 	});
+	 	
+	 </script>
+	 

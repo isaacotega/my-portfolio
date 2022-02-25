@@ -1,0 +1,373 @@
+#remark {
+	font-size: 0px;
+	font-weight: 700;
+	color: yellow;
+	font-family: mocaco;
+	position: absolute;
+	bottom: 30%;
+	width: 100%;
+	text-align: center;
+	transition: 0.1s;
+}
+
+#gameStatus {
+	font-size: 40px;
+	font-weight: 700;
+	color: orange;
+	font-family: mocaco;
+	position: absolute;
+	bottom: 25%;
+	width: 100%;
+	text-align: center;
+}
+
+body {
+	zoom: 100%;
+}	
+
+#secondHeader {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  background-color: #352E2D;
+  color: white;
+  font-size: 40px;
+  top: 80px;
+  left: 0;
+  transition: opacity 0.3s;
+}
+
+#logo {
+  height: 80px;
+  width: 80px;
+  float: left;
+  background-color: #0F2231;
+  margin-right: 10px;
+  border-radius: 10%;
+}
+
+.headIcon {
+  height: 80px;
+  width: 80px;
+  float: right;
+  background-color: #0F2231;
+  margin-right: 10px;
+  border-radius: 10%;
+}
+
+#refresh {
+	background-color: #0A291B;
+}
+
+#refreshingIcon {
+  border: 15px solid white;
+  border-radius: 50%;
+  border-top: 15px solid #352E2D;
+  background-color: #352E2D;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 0.8s linear infinite; /* Safari */
+  animation: spin 0.8s linear infinite;
+  margin-left: 30%;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#participantsBar {
+	height: 100%;
+	width: 100%;
+}
+
+#participantsBar .eachParticipant {
+	height: 80px;
+     width: 90px;
+     float: left;
+     background-color: #0F2231;
+     margin: 5px 0 0 15px;
+     border-radius: 10%;
+     text-align: center;
+     border: 5px solid #0F2231;
+}
+
+#participantsBar .eachParticipant .eachParticipantPicture {
+	height: 50px;
+     width: 50px;
+     background-color: blue;
+     border-radius: 50%;
+}
+
+#participantsBar .eachParticipant .eachParticipantName {
+	font-size: 10px;
+	color: white;
+}
+
+#myCards {
+     width: 90%;
+     position: fixed;
+	bottom: 50px;
+	left: 5%;
+     zoom: 70%; 
+}
+
+#myCards .cards {
+	height: 180px;
+     width: 100px;
+     background-color: white;
+     margin-left: 15px;
+     margin-top: 25px;
+     border: 1px solid brown;
+	box-shadow: 0 0 25px 1px #0E410E;
+}
+
+#myCards .cards:active {
+	box-shadow: 0 0 0 0;
+}
+
+.othersCards {
+	height: 100px;
+     width: 100px;
+     background-color: green;
+     border: 0px solid;
+	text-align: center;
+}
+
+.othersCards .cards {
+	height: 75px;
+     width: 50px;
+	position: fixed;
+     background-color: brown;
+     border: 1px solid white;
+}
+
+.othersCards .lblWhot {
+	font-size: 25px;
+	font-family: cursive;
+	font-weight: 300;
+	color: white;
+}
+
+.othersCards .lblWhot2 {
+	font-size: 15px;
+	font-family: cursive;
+	font-weight: 300;
+	color: white;
+	transform: rotate(180deg);
+}
+
+#myCards .largeShape {
+     width: 60px;
+     margin-left: 10px;
+}
+
+.smallShape {
+	height: 20px;
+     width: 20px;
+     float: left;
+}
+
+.smallShape2 {
+	height: 20px;
+     width: 20px;
+     float: right;
+     transform: rotate(180deg);
+}
+
+.number {
+	font-size: 25px;
+	font-family: cursive;
+	font-weight: 700;
+     float: left;
+}
+
+.number2 {
+	font-size: 25px;
+	font-family: cursive;
+	font-weight: 700;
+     float: right;
+     transform: rotate(180deg);
+}
+
+#cardStack {
+	text-align:center;
+	height: 200px;
+     width: 200px;
+	position: fixed;
+     left: 35%;
+     top: 50%;
+	text-align: center;
+	-ms-transform: translateY(-50%);
+     transform: translateY(-50%);
+}
+
+#cardStack .cards {
+	position: absolute;
+	width: 100px;
+	height: 150px;
+}
+
+#cardStack .cards .lblWhot {
+	font-size: 25px;
+	font-family: cursive;
+	font-weight: 300;
+	color: black;
+}
+
+#cardStack .cards .lblWhot2 {
+	font-size: 25px;
+	font-family: cursive;
+	font-weight: 300;
+	color: black;
+	transform: rotate(180deg);
+}
+
+#cardStack .largeShape {
+    margin: 0 15px 0 0;
+}
+
+#market {
+	text-align:center;
+	height: 200px;
+     width: 200px;
+	position: fixed;
+     right: 5%;
+     top: 50%;
+	text-align: center;
+	-ms-transform: translateY(-50%);
+     transform: translateY(-50%);
+}
+
+#market .cards {
+	height: 180px;
+     width: 100px;
+	position: fixed;
+     background-color: brown;
+     border: 1px solid white;
+	text-align: center;
+	overflow-x: hidden;
+}
+
+#market .lblWhot {
+	font-size: 40px;
+	font-family: cursive;
+	font-weight: 700;
+	color: white;
+}
+
+#market .lblWhot2 {
+	font-size: 40px;
+	font-family: cursive;
+	font-weight: 700;
+	color: white;
+	transform: rotate(180deg);
+}
+
+.Carpet {
+	color: black;
+	font-size: 90px;
+}
+
+.Ball {
+	color: black;
+	font-size: 90px;
+}
+
+.Star {
+	color: black;
+	font-size: 90px;
+}
+
+.Cross {
+	color: black;
+	font-size: 90px;
+}
+
+.Angle {
+	color: black;
+	font-size: 70px;
+}
+
+.Whot {
+	color: black;
+	font-size: 60px;
+}
+
+
+.smallCarpet {
+	color: black;
+	font-size: 20px;
+}
+
+.smallBall {
+	color: black;
+	font-size: 20px;
+}
+
+.smallStar {
+	color: black;
+	font-size: 20px;
+}
+
+.smallCross {
+	color: black;
+	font-size: 20px;
+}
+
+.smallAngle {
+	color: black;
+	font-size: 20px;
+}
+
+.smallWhot {
+	color: black;
+	font-size: 20px;
+}
+
+#myCards .cards .lblWhot {
+	font-size: 15px;
+	font-family: cursive;
+	font-weight: 300;
+	color: black;
+}
+
+#myCards .cards .lblWhot2 {
+	font-size: 15px;
+	font-family: cursive;
+	font-weight: 300;
+	color: black;
+	margin-left: 15px;
+	transform: rotate(180deg);
+}
+
+#whotShapesHolder {
+  height: 120px;
+  width: 60%;
+  position: fixed;
+  left: 20%;
+  bottom: 0;
+  text-align: center;
+  display: none;
+}
+
+.whotShapesSelectors {
+	height: 0px;
+	width: 0px;
+	border-radius: 50%;
+	margin-left: 5px;
+	overflow-x: hidden;
+	transition: 0.2s;
+	box-shadow: 0 0 20px 1px black;
+}
+
+.whotShapesSelectors:active {
+	box-shadow: 0 0 0 0;
+     background-color: #7DCCCA;
+}
